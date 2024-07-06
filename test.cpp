@@ -161,6 +161,11 @@ public:
         return false;
     }
 
+
+    int passThePillow(int n, int time) {
+        return time / (n-1) % 2 == 0 ? time % (n-1) : n - (time % (n-1));
+    }
+
     void rotate(std::vector<std::vector<int>>& matrix) {
     }
 };
@@ -172,14 +177,15 @@ int main()
     std::vector<int> vect2{ 0, 1, 3, 4 };
 
     Solution sol;
-    std::vector<int> ve = sol.twoSum(vect, 6);
+    std::cout << "res = " << sol.passThePillow(6, 7);
+    //std::vector<int> ve = sol.twoSum(vect, 6);
     //std::cout << "\nres = " << sol.threeConsecutiveOdds(vect);
 
     
-    for (int i : ve)
-    {
-        std::cout << " " << i;
-    }
+    //for (int i : ve)
+    //{
+    //    std::cout << " " << i;
+    //}
     /*
     std::cout << "\n";
     for (int i : vect2)
